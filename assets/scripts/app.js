@@ -15,7 +15,7 @@ function WriteOuput(previousResult, operator, enteredNumber){
 function add(){
     const previousResult = currentResult;
     const enteredNumber = getUserNumberInput();
-    currentResult = currentResult + parseInt(enteredNumber);
+    currentResult +=  parseInt(enteredNumber);
     WriteOuput(previousResult, '+', enteredNumber);
 }
 
@@ -23,21 +23,21 @@ function add(){
 function subtract(){
     const previousResult = currentResult;
     const enteredNumber = getUserNumberInput();
-    currentResult = currentResult - parseInt(enteredNumber);
+    currentResult -=  parseInt(enteredNumber);
     WriteOuput(previousResult, '-', enteredNumber);
 }
 
 function multiply(){
     const previousResult = currentResult;
     const enteredNumber = getUserNumberInput();
-    currentResult = currentResult * parseInt(enteredNumber);
+    currentResult *=  parseInt(enteredNumber);
     WriteOuput(previousResult, '*', enteredNumber);
 }
 
 function divide(){
     const previousResult = currentResult;
     const enteredNumber = getUserNumberInput();
-    currentResult = currentResult / parseInt(enteredNumber);
+    currentResult /=  parseInt(enteredNumber);
     WriteOuput(previousResult, '/', enteredNumber);
 }
 
