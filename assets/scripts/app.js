@@ -31,19 +31,31 @@ function CalculateResult(calculationType) {
   const enteredNumber = getUserNumberInput();
   let mathOperator;
 
+
+  if(calculationType==='DIVIDE' && !enteredNumber){
+      let err = document.getElementById('current-calculation');
+      err.textContent = 'Divide by 0 is not allowed';
+      return;
+  } // if entered number is 0 (fasly) then return out of this function
+
+
   switch (calculationType) {
+
     case "ADD":
       currentResult += parseInt(enteredNumber);
       mathOperator = '+';
       break;
+
     case "SUBTRACT":
       currentResult -= parseInt(enteredNumber);
       mathOperator = '-';
       break;
+
     case "MULTIPLY":
       currentResult *= parseInt(enteredNumber);
       mathOperator = '*';
       break;
+      
     case "DIVIDE":
       currentResult /= parseInt(enteredNumber);
       mathOperator = '/';
